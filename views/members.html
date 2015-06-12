@@ -1,0 +1,20 @@
+<div class="panel panel-default">
+    <div class="panel-heading">Members</div>
+    
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name - Pseudo Nim</th>
+                <th>Chapter</th>
+                <th>Gender</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="member in members">
+                <td>{{member.name | capitalize}} - &#8220;{{member.pseudoNim}}&#8221;</td>
+                <td>{{member.chapterName | capitalize}}</td>
+                <td>{{member.gender | uppercase}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

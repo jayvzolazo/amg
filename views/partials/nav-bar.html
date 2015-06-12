@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">AMG</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active : navCtrl.isActive('/home') }"><a href="#/home">Home</a></li>
+                <li ng-class="{ active : navCtrl.isActive('/chapters') }"><a href="#/chapters">Chapters</a></li>
+                <li ng-class="{ active : navCtrl.isActive('/members') }"><a href="#/members">members</a></li>
+            </ul>
+        </div>
+    </div>
+    <!--
+    <ol class="breadcrumb">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li class="active">Data</li>
+    </ol>
+    -->
+</nav>

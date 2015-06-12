@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="col-md-9 col-md-push-3">
+        <div class="well well-sm">
+            <h4>{{chapterData.chapter.name | capitalize}} Chapter</h4>
+            <hr />
+            <p ng-show="!chapterData.members">No members added.</p>
+            
+            <div class="panel panel-default" ng-if="chapterData.members">
+                <div class="panel-heading">Members</div>
+                
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Pseudo Nim</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="member in chapterData.members | filter:search.member">
+                            <td>{{member.firstName | capitalize}} {{member.middleName | capitalize}} {{member.lastName | capitalize}}</td>
+                            <td>{{member.pseudoNim}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3 col-md-pull-9 affix">
+        <search-member></search-member>
+        <div>
+            <a class="btn btn-link" href="#/chapter/{{chapterData.chapter.chapterId}}/{{chapterData.chapter.name | cleanlink}}/member">
+                <i class="glyphicon glyphicon-plus"></i> Add Member
+            </a>
+        </div>
+    </div>
+</div>
